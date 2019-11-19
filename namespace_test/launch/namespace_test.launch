@@ -1,0 +1,9 @@
+<launch>
+  <arg name="ROBOT" value="$(env ROBOT)"/>
+  <group ns="$(arg ROBOT)">
+    <node name="namespace_test" pkg="namespace_test" type="namespace_test_node" output="screen">
+      <!-- <remap from="input" to="test_topic"/> -->
+      <remap from="/input" to="test_topic"/>
+    </node>
+  </group>
+</launch>

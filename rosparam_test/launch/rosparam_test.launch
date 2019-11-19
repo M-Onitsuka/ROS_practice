@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <group ns="ROBOT">
+  <node pkg="rosparam_test" name="my_test_node" type="rosparam_test_node"
+        output="screen">
+    <!-- <rosparam command="load" file="$(find rosparam_test)/config/my_param.yaml"/> -->
+    <param name="config_address" type="str" value="$(find rosparam_test)/config/my_param.yaml"/>
+    <!-- <rosparam subst_value="true"> -->
+    <!--   config_address: $(find rosparam_test)/config/my_param.yaml -->
+    <!-- </rosparam> -->
+  </node>
+  </group>
+</launch>
